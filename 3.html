@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+#image {
+width: 100%;
+height: auto;
+max-width: 100%;
+margin-left: auto;
+margin-right: auto;
+display: block;
+}
+
+#main {
+max-width: 2000px;
+position: relative;
+text-align: center;
+color:black;
+font-family:sans-serif;
+
+}
+
+#text {
+    border-color:darkgoldenrod;
+    border-width: .3em;  
+    border-style: inset;  
+    border-radius:5px;
+    background-color:rgb(249, 237, 221);
+    position: absolute;
+    top: 80%;
+    left: 50%;
+  transform: translate(-50%, -50%);
+
+
+
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: black;
+  position: fixed;
+  top:0;
+  width:100%
+}
+li {
+  float: left;
+}
+
+a {
+ 
+  display: block;
+  color:white;
+  text-decoration:none;
+  text-align: center;
+  padding: 14px 16px;
+
+}
+
+li {
+  border-right: 1px solid #bbb;
+}
+
+li:last-child {
+  border-right: none;
+}
+
+a:hover {
+    color:gray;
+}
+
+
+</style>
+<body>
+    <div id="main">
+        <div id="tribute-link"> 
+            <ul> 
+            <li><a href="https://www.britannica.com/biography/Lady-Gaga" target="_blank">Biography</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/A_Star_Is_Born_(2018_film)" target="_blank">My favorite Movie</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Lady_Gaga" target="_blank">Wiki</a></li>
+        </ul>
+        </div>
+    <div id="text">
+    <h1 id="title">Lady Gaga</h1>
+    <h3 id="img-caption">Singer & Actress</h3>
+    <p id="tribute-info">Lady Gaga, is an American singer, songwriter and actress. Known for her image reinventions and versatility across the entertainment industry, she is an influential figure in popular music and regarded as a pop icon.</p> 
+</div>
+    <div id="img-div">
+    <img id="image" src="https://cdn.theatlantic.com/thumbor/hVzK6HmqtDEOipHS2B1ZZrcgfKQ=/0x0:2000x1125/976x549/media/img/mt/2021/02/webart_gaga_copy/original.jpg"/>
+</div>   
+</div>   
+<div id="img-below">
+    <img src=" https://soundazed.s3.us-east-2.amazonaws.com/wp-content/uploads/2024/08/22235231/lady-gaga-bruno-mars-diewithasmile.jpg" width="600" height="600">
+    <img src="https://images.cdn.prd.api.discomax.com/2024/02/16/91263b9f-d933-3983-bbea-308384d6a40e.jpeg?f=jpg&q=75&w=1280&w=1200" width="790" height="600">    
+    <img src="https://hips.hearstapps.com/hmg-prod/images/lady-gaga-attends-the-64th-annual-grammy-awards-at-mgm-news-photo-1727455427.jpg?crop=1.00xw:0.667xh;0,0.0477xh&resize=1200:*" width="600" height="600">
+</div>
+
+</body>
+</html>
