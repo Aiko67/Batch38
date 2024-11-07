@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mochi Cafe Order Form</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Courier New', Courier, monospace;
+            background-image: url('https://i.etsystatic.com/20026586/r/il/c233d8/3816182976/il_794xN.3816182976_45y2.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat; 
+            display: flex;
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh;
+        }
+
+        #header {
+            background-color: rgb(84, 51, 20); 
+            padding: 20px;
+            border-radius: 8px; 
+            width: 90%; 
+            max-width: 700px; 
+            margin-bottom: 20px;
+            color: white;
+            text-align: center;
+        }
+
+        #survey-form {
+            background-color: rgba(255, 255, 255, 0.8); 
+            padding: 20px;
+            border-radius: 8px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+            width: 90%; 
+            max-width: 700px;
+        }
+
+        input, select, textarea {
+            width: 100%; 
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: inline-block;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px;
+        }
+
+        .form-group input[type="radio"], .form-group input[type="checkbox"] {
+            margin-right: 10px;
+            margin-top: 0;
+            vertical-align: middle; 
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        input[type="submit"] {
+            background-color: #FF6347;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+            padding: 10px;
+            width: 100%;
+            text-align: center;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #FF4500;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <div id="header"> 
+            <h1 id="title">Mochi Cafe</h1>
+            <p id="description">
+                Select your drink, size, or add-ons. You can also specify special instructions. Simply submit your order, and we'll have your coffee ready just the way you like it!
+            </p>
+        </div>
+        <form id="survey-form"> 
+            <!-- Name Field -->
+            <div class="form-group">
+                <label for="name" id="name-label">Name:</label>
+                <input type="text" id="name" name="name" required placeholder="Your Name">
+            </div>
+
+            <!-- Email Field -->
+            <div class="form-group"> 
+                <label for="email" id="email-label">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="Email address">
+            </div>
+
+            <!-- Coffee Flavor Selection -->
+            <div class="form-group">
+                <label>Coffee Flavor:</label>
+                <div>
+                    <input type="radio" id="Espresso" name="coffee-flavor" value="Espresso">
+                    <label for="Espresso">Espresso</label>
+                </div>
+                <div>
+                    <input type="radio" id="Cappuccino" name="coffee-flavor" value="Cappuccino">
+                    <label for="Cappuccino">Cappuccino</label>
+                </div>
+                <div>
+                    <input type="radio" id="FlatWhite" name="coffee-flavor" value="Flat White">
+                    <label for="FlatWhite">Flat White</label>
+                </div>
+            </div>
+
+            <!-- Size Selection -->
+            <div class="form-group">
+                <label for="size">Size:</label>
+                <select name="size" id="dropdown">
+                    <option value="Small">Small</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Large">Large</option>
+                    <option value="XL">XL</option>
+                </select>
+            </div>
+
+            <!-- Quantity Input -->
+            <div class="form-group">
+                <label for="number" id="number-label">Quantity (between 1-10):</label>
+                <input type="number" id="number" name="number" min="1" max="10" required placeholder="1-10">
+            </div>
+
+            <!-- Add-Ons -->
+            <div class="form-group">
+                <label>Add-Ons:</label>
+                <div>
+                    <input type="checkbox" id="Cookie" name="addons" value="Red Velvet Cookies">
+                    <label for="Cookie">Red Velvet Cookies</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="Muffin" name="addons" value="Blueberry Muffin">
+                    <label for="Muffin">Blueberry Muffin</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="Croissant" name="addons" value="Almond Croissants">
+                    <label for="Croissant">Almond Croissants</label>
+                </div>
+            </div>
+
+            <!-- Special Request -->
+            <div class="form-group">
+                <label for="special-request">Any special request?</label>
+                <textarea id="special-request" name="special-request" rows="4" placeholder="Write your special request here..."></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <div>
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
